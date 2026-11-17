@@ -28,5 +28,15 @@ public class ArrayRataNilai16 {
         }
         System.out.println("Nilai tertinggi: " + tertinggi);
         System.out.println("Nilai terendah: " + terendah);
+
+        String predikat;
+        if (rata2 >= 85) {
+            predikat = "SANGAT BAIK";
+        } else if (rata2 >= 70) {
+            predikat = "BAIK";
+        } else {
+            predikat = "PERLU PENDAMPINGAN";
+        }
+        System.out.println("Predikat kelas: " + predikat);
     }
 }
