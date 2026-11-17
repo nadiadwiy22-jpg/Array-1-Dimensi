@@ -5,21 +5,29 @@ public class ArrayNilai16 {
 
         int[] nilaiAkhir = new int[10];
 
-        //Langkah 4  tetap for biasa, karena harus mengisi elemen lewat indeks
         for (int i = 0; i < nilaiAkhir.length; i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");
             nilaiAkhir[i] = input.nextInt();
         }
 
-        // Langkah 5 bisa foreach, nomor mahasiswa memakai penghitung manual
-        int no = 1;
-        for (int nilai : nilaiAkhir) {
-            String status = (nilai > 70) ? "LULUS" : "TIDAK LULUS";
-            System.out.println("Mahasiswa ke-" + no + ": " + nilai + " (" + status + ")");
-            no++;
+        int lulus = 0, tidakLulus = 0;
+        for (int i = 0; i < nilaiAkhir.length; i++) {
+            String status;
+            if (nilaiAkhir[i] > 70) {
+                status = "LULUS";
+                lulus++;
+            } else {
+                status = "TIDAK LULUS";
+                tidakLulus++;
+            }
+            System.out.println("Mahasiswa ke-" + (i + 1) + ": " + nilaiAkhir[i] + " (" + status + ")");
         }
+
+        System.out.println("Jumlah lulus: " + lulus);
+        System.out.println("Jumlah tidak lulus: " + tidakLulus);
     }
 }
+
 
     
         
